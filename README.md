@@ -1,26 +1,3 @@
-<p align="center">
-  <a href="https://tintef.github.io/react-google-places-autocomplete" target="_blank">
-    <img width="250"src="https://raw.githubusercontent.com/tintef/react-google-places-autocomplete/master/docs/static/img/logo.svg">
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://www.npmjs.com/package/react-google-places-autocomplete">
-    <img src="https://img.shields.io/npm/v/react-google-places-autocomplete.svg"/>
-    <img src="https://img.shields.io/npm/dm/react-google-places-autocomplete.svg"/>
-  </a>
-  <a href="https://travis-ci.org/tintef/react-google-places-autocomplete">
-    <img src="https://www.travis-ci.com/Tintef/react-google-places-autocomplete.svg?branch=master" />
-  </a>
-  <a href="https://packagequality.com/#?package=react-google-places-autocomplete">
-    <img src="https://npm.packagequality.com/shield/react-google-places-autocomplete.svg"/>
-  </a>
-  <a href="https://www.npmjs.com/package/react-google-places-autocomplete">
-    <img src="https://img.shields.io/npm/l/react-google-places-autocomplete.svg" alt="License">
-  </a>
-</p>
-
-
 # React Google Places Autocomplete hook
 
 This is the Fork of <a href="https://github.com/tintef/react-google-places-autocomplete">tintef/react-google-places-autocomplete</a>
@@ -33,6 +10,34 @@ Install the latest version:
 npm install --save @erslee/react-google-places-autocomplete-hook
   or
 yarn add @erslee/react-google-places-autocomplete-hook
+```
+
+Use the hook in the component!
+```js
+import React from 'react';
+import useGooglePlacesAutocomplete from '@erslee/react-google-places-autocomplete-hook';
+
+const Component = () => (
+  const [ autocompleteData, setAutocompleteData ] = useState([]);
+  const [ autocomplete ] = useGooglePlacesAutocomplete({
+		apiKey: "***",
+		debounce: 300,
+		minLengthAutocomplete: 3
+	});
+
+  const handleChange = (event) => {
+    const value = event.target.value;
+
+    autocomplete(value, (data) => {
+      setAutocompleteData(data);
+    })
+  }
+
+  <div>
+    <input onChange={handleChange} />
+    {autocompleteData && autocompleteData.map(item => <li>item.label</li>)}
+  </div>
+);
 ```
 
 ## Original Documentation
