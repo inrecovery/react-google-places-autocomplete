@@ -30,9 +30,9 @@ This is the Fork of <a href="https://github.com/tintef/react-google-places-autoc
 
 Install the latest version:
 ```sh
-npm install --save react-google-places-autocomplete-hook
+npm install --save @erslee/react-google-places-autocomplete-hook
   or
-yarn add react-google-places-autocomplete-hook
+yarn add @erslee/react-google-places-autocomplete-hook
 ```
 
 ## Original Documentation
