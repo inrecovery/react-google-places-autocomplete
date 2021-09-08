@@ -21,19 +21,21 @@
 </p>
 
 
-# React Google Places Autocomplete
+# React Google Places Autocomplete hook
 
-React component for easily use Google Places Autocomplete
+This is the Fork of <a href="https://github.com/tintef/react-google-places-autocomplete">tintef/react-google-places-autocomplete</a>
 
 
 ## Getting started
 
 Install the latest version:
 ```sh
-npm install --save react-google-places-autocomplete
+npm install --save react-google-places-autocomplete-hook
   or
-yarn add react-google-places-autocomplete
+yarn add react-google-places-autocomplete-hook
 ```
+
+## Original Documentation
 
 Use the component!
 ```js
@@ -41,6 +43,7 @@ import React from 'react';
 import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
 
 const Component = () => (
+  
   <div>
     <GooglePlacesAutocomplete
       apiKey="****"
