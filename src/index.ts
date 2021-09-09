@@ -1,4 +1,4 @@
-import GooglePlacesAutocomplete from './GooglePlacesAutocomplete';
+import { useGooglePlacesAutocomplete } from './GooglePlacesActucompleteHook';
 import getLatLng from './utils/getLatLng';
 import geocodeByAddress from './utils/geocodeByAddress';
 import geocodeByLatLng from './utils/geocodeByLatLng';
@@ -9,5 +9,6 @@ export {
   geocodeByAddress,
   geocodeByLatLng,
   geocodeByPlaceId,
+  useGooglePlacesAutocomplete
 };
-export default GooglePlacesAutocomplete;
+export default useGooglePlacesAutocomplete;
